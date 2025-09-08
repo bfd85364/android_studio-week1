@@ -1,7 +1,6 @@
 # android_studio-week1
 
 
-activity_main.xm1
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -16,63 +15,63 @@ activity_main.xm1
         android:id="@+id/Edit1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="15pt"
-        android:textSize="20sp"
+        android:layout_margin="15dp"
+        android:textSize="10sp"
         android:hint="x1" />
 
     <EditText
         android:id="@+id/Edit2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15pt"
-        android:textSize="20sp"
+        android:layout_margin="15dp"
+        android:textSize="10sp"
         android:hint="x2" />
 
     <Button
         android:id="@+id/BtnAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15pt"
-        android:textSize="20sp"
+        android:layout_margin="15dp"
+        android:textSize="10sp"
         android:text="더하기"/>
 
     <Button
         android:id="@+id/Btnminus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="48dp"
-        android:textSize="20sp"
+        android:layout_margin="15dp"
+        android:textSize="10sp"
         android:text="빼기"/>
 
     <Button
         android:id="@+id/Btnmulti"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="48dp"
-        android:textSize="20sp"
+        android:layout_margin="15dp"
+        android:textSize="10sp"
         android:text="곱하기"/>
 
     <Button
         android:id="@+id/Btndivide"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="48dp"
+        android:layout_margin="15dp"
         android:text="나누기"
-        android:textSize="20sp" />
+        android:textSize="10sp" />
 
     <TextView
         android:id="@+id/TextResult"
-        android:layout_width="wrap_content"
+        android:layout_width="378dp"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
+        android:layout_margin="10dp"
+        android:text="계산 결과: "
         android:textColor="#FF0000"
-        android:layout_margin="48dp"
-        android:text="계산 결과: " />
+        android:textSize="15sp" />
 
 </LinearLayout>
-
 -------------------------------java 코드------------------------------------------------------------------------------------------------------------------------------------------------------------
-package com.example.a202305127__20250908;
+
+package com.example.a202305127_2025_09_08;
 
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -96,6 +95,8 @@ public class MainActivity extends AppCompatActivity {
     Integer result;
 
 
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -108,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
         Edit1 = (EditText) findViewById(R.id.Edit1);
         Edit2 = (EditText) findViewById(R.id.Edit2);
         BtnAdd =(Button) findViewById(R.id.BtnAdd);
@@ -155,6 +157,7 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+
 
     }
 }
